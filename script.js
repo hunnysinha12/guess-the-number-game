@@ -44,7 +44,7 @@ document.querySelector(".check").addEventListener("click", function () {
 
   // when input is not equal
   else if (guess !== random) {
-    if (score > 1) {
+    if (score > 0) {
       displayMessage(
         guess > random
           ? "☝️ The Number is Higher than Secter Number"
@@ -56,6 +56,7 @@ document.querySelector(".check").addEventListener("click", function () {
       // when you have entered max attempts
 
       displayMessage("💥 You Loose the game Click Agian!");
+      document.querySelector("body").style.backgroundColor = "red";
     }
   }
 });
